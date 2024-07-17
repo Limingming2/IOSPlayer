@@ -7,9 +7,10 @@
 //
 
 #import "HMMusicCell.h"
-#import "HMMusic.h"
 #import "UIImage+NJ.h"
 #import "Colours.h"
+#import "HMWangyiMusicModel.h"
+#import "UIImageView+XM.h"
 
 @implementation HMMusicCell
 
@@ -23,12 +24,19 @@
     return cell;
 }
 
-- (void)setMusic:(HMMusic *)music {
+- (void)setMusic:(id)music {
     _music = music;
     
-    self.textLabel.text = music.name;
-    self.detailTextLabel.text = music.singer;
-    self.imageView.image = [UIImage circleImageWithName:music.singerIcon borderWidth:3 borderColor:[UIColor skyBlueColor]];
+    if ([music isKindOfClass:[HMWangyiMusicModel class]]) {
+        HMWangyiMusicModel *model = music;
+        self.textLabel.text = model.title;
+        self.detailTextLabel.text = model.author;
+        [self.imageView imageWithUrl:model.pic];
+    }
+    
+//    self.textLabel.text = music.name;
+//    self.detailTextLabel.text = music.singer;
+//    self.imageView.image = [UIImage circleImageWithName:music.singerIcon borderWidth:3 borderColor:[UIColor skyBlueColor]];
 }
 
 @end

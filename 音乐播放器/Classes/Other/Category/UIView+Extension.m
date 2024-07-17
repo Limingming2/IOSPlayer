@@ -13,6 +13,10 @@
 {
     CGRect frame = self.frame;
     frame.origin.x = x;
+    if (isnan(x)) {
+        NSLog(@"防止崩溃一次");
+        return;
+    }
     self.frame = frame;
 }
 

@@ -8,6 +8,7 @@
 
 #import "HMMusicsTool.h"
 #import "MJExtension.h"
+#import "HMMusicList.h"
 
 @implementation HMMusicsTool
 
@@ -15,37 +16,38 @@
 static NSArray *_musics;
 
 // 当前正在播放歌曲
-static HMMusic *_playingMusic;
+static id _playingMusic;
 
 // 获取所有音乐
 + (NSArray *)musics
 {
-    if (!_musics) {
-        _musics = [HMMusic objectArrayWithFilename:@"Musics.plist"];
-    }
-    return _musics;
+    return [HMMusicList getInstance].musics;
+//    if (!_musics) {
+//        
+//        _musics = [HMMusic objectArrayWithFilename:@"Musics.plist"];
+//    }
+//    return _musics;
 }
 
 // 设置当前正在播放的音乐
-+ (void)setPlayingMusic:(HMMusic *)music
++ (void)setPlayingMusic:(id)music
 {
     // 判断传入的音乐模型是否为nil
     // 判断数组中是否包含该音乐模型
-    if (!music ||
-        ![[self musics] containsObject:music]) {
+    if (!music) {
         return;
     }
     _playingMusic = music;
 }
 
 // 返回当前正在播放的音乐
-+ (HMMusic *)returnPlayingMusic
++ (id)returnPlayingMusic
 {
     return _playingMusic;
 }
 
 // 获取下一首
-+ (HMMusic *)nextMusic
++ (id)nextMusic
 {
     // 1.获取当前播放的索引
     NSArray *_musics=[self musics];
@@ -61,7 +63,7 @@ static HMMusic *_playingMusic;
 }
 
 // 获取上一首
-+ (HMMusic *)previouesMusic
++ (id)previouesMusic
 {
     // 1.获取当前播放的索引
     NSUInteger currentIndex = [[self musics] indexOfObject:_playingMusic];

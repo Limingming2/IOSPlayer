@@ -15,6 +15,9 @@
 #import "HMLrcView.h"
 #import "HMMusicsTool.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "HMWangyiMusicModel.h"
+#import "Header.h"
+#import "UIImageView+XM.h"
 
 @interface HMPlayingViewController () <AVAudioPlayerDelegate>
 /**
@@ -37,7 +40,7 @@
 /**
  *  当前正在播放的音乐
  */
-@property (nonatomic, strong) HMMusic *playingMusic;
+@property (nonatomic, strong) HMWangyiMusicModel *playingMusic;
 
 /**
  *  当前播放器
@@ -155,36 +158,49 @@
 {
     // 执行动画完毕, 开始播放音乐
     // 1.取出当前正在播放的音乐模型
-    HMMusic *music = [HMMusicsTool returnPlayingMusic];
+    id mu = [HMMusicsTool returnPlayingMusic];
     
-    // 2.播放音乐
-    self.player = [HMAudioTool playMusic:music.filename];
-    self.player.delegate = self;
-    // 记录当前正在播放的音乐
-    self.playingMusic = [HMMusicsTool returnPlayingMusic];
+    if ([mu isKindOfClass:[HMWangyiMusicModel class]]) {
+        HMWangyiMusicModel *music = mu;
+        // 2.播放音乐
+        self.player = [HMAudioTool playMusic:LOCAL_MUSIC_FILE(music.fileName)];
+        if (!self.player) {
+            NSLog(@"本音乐播放不了，播放下一曲");
+            music.isvalid = NO;
+            [self next];
+            
+            return;
+        }
+        self.player.delegate = self;
+        // 记录当前正在播放的音乐
+        self.playingMusic = [HMMusicsTool returnPlayingMusic];
+        
+        // 3.设置其他属性
+        // 设置歌手
+        self.singerLabel.text = music.author;
+        // 歌曲名称
+        self.songLabel.text = music.title;
+        // 背景大图
+        [self.iconView imageWithUrl:music.pic];
+//        self.iconView.image = [UIImage imageNamed:music.pic];
+        // 设置总时长
+        self.durationLabel.text = [self strWithTimeInterval:self.player.duration];
+        
+        // 4.开启定时器
+        [self addProgressTimer];
+        [self addLrcTimer];
+        
+        // 5.设置播放按钮状态
+        self.playOrPauseButton.selected = YES;
+        
+        // 6.切换歌词（加载新的歌词）
+//        self.lrcView.lrcname = self.playingMusic.lrcname;
+        self.lrcView.lrcname = music.lrc;
+        // 7.切换锁屏界面的歌曲
+        [self updateLockedScreenMusic];
+    }
     
-    // 3.设置其他属性
-    // 设置歌手
-    self.singerLabel.text = music.singer;
-    // 歌曲名称
-    self.songLabel.text = music.name;
-    // 背景大图
-    self.iconView.image = [UIImage imageNamed:music.icon];
-    // 设置总时长
-    self.durationLabel.text = [self strWithTimeInterval:self.player.duration];
     
-    // 4.开启定时器
-    [self addProgressTimer];
-    [self addLrcTimer];
-    
-    // 5.设置播放按钮状态
-    self.playOrPauseButton.selected = YES;
-    
-    // 6.切换歌词（加载新的歌词）
-    self.lrcView.lrcname = self.playingMusic.lrcname;
-    
-    // 7.切换锁屏界面的歌曲
-    [self updateLockedScreenMusic];
 
 }
 
@@ -209,7 +225,7 @@
 //    self.iconView.clipsToBounds = YES;// 超出部分减掉
     
     // 停止当前正在播放的歌曲
-    [HMAudioTool stopMusic:self.playingMusic.filename];
+    [HMAudioTool stopMusic:self.playingMusic.fileName];
     self.player = nil;
     
     // 设置播放按钮状态
@@ -289,12 +305,12 @@
 - (IBAction)playOrPause {
     if (self.player.isPlaying) { // 暂停
         self.playOrPauseButton.selected = NO;
-        [HMAudioTool pauseMusic:self.playingMusic.filename];
+        [HMAudioTool pauseMusic:self.playingMusic.fileName];
         [self removeProgressTimer];
         [self removeLrcTimer];
     } else { // 继续播放
         self.playOrPauseButton.selected = YES;
-        [HMAudioTool playMusic:self.playingMusic.filename];
+        [HMAudioTool playMusic:self.playingMusic.fileName];
         [self addProgressTimer];
         [self addLrcTimer];
         
@@ -398,13 +414,14 @@
     // 2.初始化播放信息
     NSMutableDictionary *info = [NSMutableDictionary dictionary];
     // 专辑名称
-    info[MPMediaItemPropertyAlbumTitle] = self.playingMusic.name;
+    info[MPMediaItemPropertyAlbumTitle] = self.playingMusic.title;
     // 歌手
-    info[MPMediaItemPropertyArtist] = self.playingMusic.singer;
+    info[MPMediaItemPropertyArtist] = self.playingMusic.author;
     // 歌曲名称
-    info[MPMediaItemPropertyTitle] = self.playingMusic.name;
+    info[MPMediaItemPropertyTitle] = self.playingMusic.title;
     // 设置图片
-    info[MPMediaItemPropertyArtwork] = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:self.playingMusic.icon]];
+    
+    
     // 设置持续时间（歌曲的总时间）
     info[MPMediaItemPropertyPlaybackDuration] = @(self.player.duration);
     // 设置当前播放进度

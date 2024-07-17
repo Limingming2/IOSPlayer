@@ -11,5 +11,5 @@
 
 @interface HMMusicCell : UITableViewCell
 + (instancetype)cellWithTableView:(UITableView *)tableView;
-@property (nonatomic, strong) HMMusic *music;
+@property (nonatomic, strong) id music;
 @end

@@ -16,7 +16,7 @@
     AVAudioSession *session = [AVAudioSession sharedInstance];
     
     // 设置会话类型（播放类型、播放模式,会自动停止其他音乐的播放）
-    [session setCategory:AVAudioSessionCategorySoloAmbient error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
     
     // 激活会话
     [session setActive:YES error:nil];
@@ -56,22 +56,24 @@ static NSMutableDictionary *_musicPlayers;
     if (!filename) return nil;
     
     // 1.取出对应的播放器
-    AVAudioPlayer *player = [self musicPlayers][filename];
+    AVAudioPlayer *player = [self musicPlayers][[filename lastPathComponent]];
+    
+    
     
     // 2.播放器没有创建，进行初始化
     if (!player) {
         // 音频文件的URL
-        NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
+//        NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
+        NSURL *url = [NSURL fileURLWithPath:filename];
         if (!url) return nil;
         
         // 创建播放器(一个AVAudioPlayer只能播放一个URL)
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-        
         // 缓冲
         if (![player prepareToPlay]) return nil;
         
         // 存入字典
-        [self musicPlayers][filename] = player;
+        [self musicPlayers][[filename lastPathComponent]] = player;
     }
     
     // 3.播放

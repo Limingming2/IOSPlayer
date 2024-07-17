@@ -155,7 +155,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, -visibleRect.origin.x, -visibleRect.origin.y);
     CALayer *layer = superview.layer;
-    [layer renderInContext:context];
+//    [layer renderInContext:context];
     
     //show all the blurred views from the superview before taking a screenshot
     [self toggleBlurViewsInView:superview hidden:NO alpha:alpha];
@@ -169,7 +169,8 @@
         //helps w/ our colors when blurring
         //feel free to adjust jpeg quality (lower = higher perf)
         NSData *imageData = UIImageJPEGRepresentation(image, kDRNRealTimeBlurViewScreenshotCompression);
-        image = [[UIImage imageWithData:imageData] drn_boxblurImageWithBlur:kDRNRealTimeBlurViewBlurRadius];
+//        image = [[UIImage imageWithData:imageData] drn_boxblurImageWithBlur:kDRNRealTimeBlurViewBlurRadius];
+        image = [UIImage imageWithData:imageData];
     
         dispatch_sync(dispatch_get_main_queue(), ^{
             //update the layer content
@@ -237,6 +238,7 @@
  * the registered views to render */
 - (void)refresh
 {    
+    return;
     if (!self.views.count) return;
     
     //refresh all the registered views

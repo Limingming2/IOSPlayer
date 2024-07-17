@@ -58,7 +58,6 @@
 		7DE6092C1B1209D100BC355D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609261B1209D100BC355D /* AppDelegate.m */; };
 		7DE6092D1B1209D100BC355D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609291B1209D100BC355D /* main.m */; };
 		7DE609301B120A9300BC355D /* HMMusicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6092F1B120A9300BC355D /* HMMusicsViewController.m */; };
-		7DE609331B120AEE00BC355D /* HMMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609321B120AEE00BC355D /* HMMusic.m */; };
 		7DE609381B120B1200BC355D /* UIImage+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609351B120B1200BC355D /* UIImage+NJ.m */; };
 		7DE609391B120B1200BC355D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609371B120B1200BC355D /* UIView+Extension.m */; };
 		7DE609551B120B2400BC355D /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6093C1B120B2400BC355D /* Colours.m */; };
@@ -76,6 +75,17 @@
 		7DE609641B120D5B00BC355D /* HMPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609621B120D5B00BC355D /* HMPlayingViewController.m */; };
 		7DE609681B120E0200BC355D /* HMAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE609671B120E0200BC355D /* HMAudioTool.m */; };
 		7DE6096B1B120E0D00BC355D /* HMMusicsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6096A1B120E0D00BC355D /* HMMusicsTool.m */; };
+		BA0A9FE62C1DDEE70062CF41 /* HMGroupDetailScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0A9FE52C1DDEE70062CF41 /* HMGroupDetailScene.m */; };
+		BA28145D2C10152500AEEEAD /* HMWangyiScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA28145C2C10152500AEEEAD /* HMWangyiScene.m */; };
+		BA62424A2C1C678300D73B76 /* HMMineScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6242492C1C678300D73B76 /* HMMineScene.m */; };
+		BA62424D2C1C67A000D73B76 /* HMGroupManagerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA62424C2C1C67A000D73B76 /* HMGroupManagerScene.m */; };
+		BA7987052C103D79006C5B4A /* HMWangyiMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7987042C103D79006C5B4A /* HMWangyiMusicModel.m */; };
+		BA7987082C104A45006C5B4A /* HMWangyiMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7987072C104A45006C5B4A /* HMWangyiMusicCell.m */; };
+		BA79870B2C116598006C5B4A /* UIImageView+XM.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79870A2C116598006C5B4A /* UIImageView+XM.m */; };
+		BAEC10A42C0DEB4200B803C9 /* HMConfigScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10A32C0DEB4200B803C9 /* HMConfigScene.m */; };
+		BAEC10A72C0DEBA400B803C9 /* HMRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10A62C0DEBA400B803C9 /* HMRequestTool.m */; };
+		BAEC10AA2C0F02DA00B803C9 /* HMMusicList.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10A92C0F02DA00B803C9 /* HMMusicList.m */; };
+		BAEC10AD2C0F030D00B803C9 /* HMManagerMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10AC2C0F030D00B803C9 /* HMManagerMusic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,8 +162,6 @@
 		7DE609291B1209D100BC355D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DE6092E1B120A9300BC355D /* HMMusicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMusicsViewController.h; sourceTree = "<group>"; };
 		7DE6092F1B120A9300BC355D /* HMMusicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMusicsViewController.m; sourceTree = "<group>"; };
-		7DE609311B120AEE00BC355D /* HMMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMusic.h; sourceTree = "<group>"; };
-		7DE609321B120AEE00BC355D /* HMMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMusic.m; sourceTree = "<group>"; };
 		7DE609341B120B1200BC355D /* UIImage+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NJ.h"; sourceTree = "<group>"; };
 		7DE609351B120B1200BC355D /* UIImage+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NJ.m"; sourceTree = "<group>"; };
 		7DE609361B120B1200BC355D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -189,6 +197,29 @@
 		7DE609671B120E0200BC355D /* HMAudioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAudioTool.m; sourceTree = "<group>"; };
 		7DE609691B120E0D00BC355D /* HMMusicsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMusicsTool.h; sourceTree = "<group>"; };
 		7DE6096A1B120E0D00BC355D /* HMMusicsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMusicsTool.m; sourceTree = "<group>"; };
+		BA0A9FE42C1DDEE70062CF41 /* HMGroupDetailScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMGroupDetailScene.h; sourceTree = "<group>"; };
+		BA0A9FE52C1DDEE70062CF41 /* HMGroupDetailScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMGroupDetailScene.m; sourceTree = "<group>"; };
+		BA28145B2C10152500AEEEAD /* HMWangyiScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMWangyiScene.h; sourceTree = "<group>"; };
+		BA28145C2C10152500AEEEAD /* HMWangyiScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMWangyiScene.m; sourceTree = "<group>"; };
+		BA6242482C1C678300D73B76 /* HMMineScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMMineScene.h; sourceTree = "<group>"; };
+		BA6242492C1C678300D73B76 /* HMMineScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMMineScene.m; sourceTree = "<group>"; };
+		BA62424B2C1C67A000D73B76 /* HMGroupManagerScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMGroupManagerScene.h; sourceTree = "<group>"; };
+		BA62424C2C1C67A000D73B76 /* HMGroupManagerScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMGroupManagerScene.m; sourceTree = "<group>"; };
+		BA7987032C103D79006C5B4A /* HMWangyiMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMWangyiMusicModel.h; sourceTree = "<group>"; };
+		BA7987042C103D79006C5B4A /* HMWangyiMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMWangyiMusicModel.m; sourceTree = "<group>"; };
+		BA7987062C104A45006C5B4A /* HMWangyiMusicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMWangyiMusicCell.h; sourceTree = "<group>"; };
+		BA7987072C104A45006C5B4A /* HMWangyiMusicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMWangyiMusicCell.m; sourceTree = "<group>"; };
+		BA7987092C116598006C5B4A /* UIImageView+XM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XM.h"; sourceTree = "<group>"; };
+		BA79870A2C116598006C5B4A /* UIImageView+XM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XM.m"; sourceTree = "<group>"; };
+		BAEC10A22C0DEB4200B803C9 /* HMConfigScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMConfigScene.h; sourceTree = "<group>"; };
+		BAEC10A32C0DEB4200B803C9 /* HMConfigScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMConfigScene.m; sourceTree = "<group>"; };
+		BAEC10A52C0DEBA400B803C9 /* HMRequestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMRequestTool.h; sourceTree = "<group>"; };
+		BAEC10A62C0DEBA400B803C9 /* HMRequestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRequestTool.m; sourceTree = "<group>"; };
+		BAEC10A82C0F02DA00B803C9 /* HMMusicList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMMusicList.h; sourceTree = "<group>"; };
+		BAEC10A92C0F02DA00B803C9 /* HMMusicList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMMusicList.m; sourceTree = "<group>"; };
+		BAEC10AB2C0F030D00B803C9 /* HMManagerMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMManagerMusic.h; sourceTree = "<group>"; };
+		BAEC10AC2C0F030D00B803C9 /* HMManagerMusic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMManagerMusic.m; sourceTree = "<group>"; };
+		BAEC10AE2C0F033800B803C9 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +382,7 @@
 				7DE609231B1209D100BC355D /* Model */,
 				7DE609241B1209D100BC355D /* Other */,
 				7DE6092B1B1209D100BC355D /* View */,
+				BAEC10AE2C0F033800B803C9 /* Header.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -358,6 +390,8 @@
 		7DE609221B1209D100BC355D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA6242472C1C676500D73B76 /* MineScene */,
+				BAEC10A12C0DEB1F00B803C9 /* ConfigScene */,
 				7DE6092E1B120A9300BC355D /* HMMusicsViewController.h */,
 				7DE6092F1B120A9300BC355D /* HMMusicsViewController.m */,
 				7DE609611B120D5B00BC355D /* HMPlayingViewController.h */,
@@ -370,10 +404,14 @@
 		7DE609231B1209D100BC355D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7DE609311B120AEE00BC355D /* HMMusic.h */,
-				7DE609321B120AEE00BC355D /* HMMusic.m */,
 				7DE3EB961B1AFC1F00A27644 /* HMLrcLine.h */,
 				7DE3EB971B1AFC1F00A27644 /* HMLrcLine.m */,
+				BAEC10A82C0F02DA00B803C9 /* HMMusicList.h */,
+				BAEC10A92C0F02DA00B803C9 /* HMMusicList.m */,
+				BAEC10AB2C0F030D00B803C9 /* HMManagerMusic.h */,
+				BAEC10AC2C0F030D00B803C9 /* HMManagerMusic.m */,
+				BA7987032C103D79006C5B4A /* HMWangyiMusicModel.h */,
+				BA7987042C103D79006C5B4A /* HMWangyiMusicModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,6 +436,8 @@
 				7DE609351B120B1200BC355D /* UIImage+NJ.m */,
 				7DE609361B120B1200BC355D /* UIView+Extension.h */,
 				7DE609371B120B1200BC355D /* UIView+Extension.m */,
+				BA7987092C116598006C5B4A /* UIImageView+XM.h */,
+				BA79870A2C116598006C5B4A /* UIImageView+XM.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -419,6 +459,8 @@
 				7DE609671B120E0200BC355D /* HMAudioTool.m */,
 				7DE609691B120E0D00BC355D /* HMMusicsTool.h */,
 				7DE6096A1B120E0D00BC355D /* HMMusicsTool.m */,
+				BAEC10A52C0DEBA400B803C9 /* HMRequestTool.h */,
+				BAEC10A62C0DEBA400B803C9 /* HMRequestTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -432,6 +474,8 @@
 				7DE3EBA41B1AFCC500A27644 /* HMLrcCell.m */,
 				7DE3EB931B1ABF6400A27644 /* HMMusicCell.h */,
 				7DE3EB941B1ABF6400A27644 /* HMMusicCell.m */,
+				BA7987062C104A45006C5B4A /* HMWangyiMusicCell.h */,
+				BA7987072C104A45006C5B4A /* HMWangyiMusicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +517,30 @@
 				7DE609541B120B2400BC355D /* NSObject+MJMember.m */,
 			);
 			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		BA6242472C1C676500D73B76 /* MineScene */ = {
+			isa = PBXGroup;
+			children = (
+				BA6242482C1C678300D73B76 /* HMMineScene.h */,
+				BA6242492C1C678300D73B76 /* HMMineScene.m */,
+				BA62424B2C1C67A000D73B76 /* HMGroupManagerScene.h */,
+				BA62424C2C1C67A000D73B76 /* HMGroupManagerScene.m */,
+				BA0A9FE42C1DDEE70062CF41 /* HMGroupDetailScene.h */,
+				BA0A9FE52C1DDEE70062CF41 /* HMGroupDetailScene.m */,
+			);
+			path = MineScene;
+			sourceTree = "<group>";
+		};
+		BAEC10A12C0DEB1F00B803C9 /* ConfigScene */ = {
+			isa = PBXGroup;
+			children = (
+				BAEC10A22C0DEB4200B803C9 /* HMConfigScene.h */,
+				BAEC10A32C0DEB4200B803C9 /* HMConfigScene.m */,
+				BA28145B2C10152500AEEEAD /* HMWangyiScene.h */,
+				BA28145C2C10152500AEEEAD /* HMWangyiScene.m */,
+			);
+			path = ConfigScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,7 +593,8 @@
 				TargetAttributes = {
 					7DE608A91B12027100BC355D = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 34LPAHZG4A;
+						DevelopmentTeam = 8ACMV7U47L;
+						ProvisioningStyle = Manual;
 					};
 					7DE608C21B12027100BC355D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -619,29 +688,39 @@
 				7DE609391B120B1200BC355D /* UIView+Extension.m in Sources */,
 				7DE609591B120B2400BC355D /* MJIvar.m in Sources */,
 				7DE609561B120B2400BC355D /* MJArgument.m in Sources */,
+				BA62424D2C1C67A000D73B76 /* HMGroupManagerScene.m in Sources */,
+				BA62424A2C1C678300D73B76 /* HMMineScene.m in Sources */,
 				7DE6092D1B1209D100BC355D /* main.m in Sources */,
 				7DE6095C1B120B2400BC355D /* MJType.m in Sources */,
+				BA7987082C104A45006C5B4A /* HMWangyiMusicCell.m in Sources */,
 				7DE6095A1B120B2400BC355D /* MJMember.m in Sources */,
 				7DE609581B120B2400BC355D /* MJFoundation.m in Sources */,
+				BAEC10A42C0DEB4200B803C9 /* HMConfigScene.m in Sources */,
 				7DE6095F1B120B2400BC355D /* NSObject+MJKeyValue.m in Sources */,
 				7DE3EB9F1B1AFC7B00A27644 /* UIImage+BoxBlur.m in Sources */,
 				7DE6096B1B120E0D00BC355D /* HMMusicsTool.m in Sources */,
 				7DE609641B120D5B00BC355D /* HMPlayingViewController.m in Sources */,
 				7DE609381B120B1200BC355D /* UIImage+NJ.m in Sources */,
+				BA0A9FE62C1DDEE70062CF41 /* HMGroupDetailScene.m in Sources */,
 				7DE609551B120B2400BC355D /* Colours.m in Sources */,
 				7DE3EBA51B1AFCC500A27644 /* HMLrcCell.m in Sources */,
 				7DE6092C1B1209D100BC355D /* AppDelegate.m in Sources */,
 				7DE6095D1B120B2400BC355D /* MJTypeEncoding.m in Sources */,
-				7DE609331B120AEE00BC355D /* HMMusic.m in Sources */,
+				BA7987052C103D79006C5B4A /* HMWangyiMusicModel.m in Sources */,
+				BAEC10AA2C0F02DA00B803C9 /* HMMusicList.m in Sources */,
 				7DE6095E1B120B2400BC355D /* NSObject+MJCoding.m in Sources */,
 				7DE609571B120B2400BC355D /* MJConst.m in Sources */,
 				7DE3EB981B1AFC1F00A27644 /* HMLrcLine.m in Sources */,
 				7DE6095B1B120B2400BC355D /* MJMethod.m in Sources */,
+				BAEC10AD2C0F030D00B803C9 /* HMManagerMusic.m in Sources */,
 				7DE3EB951B1ABF6400A27644 /* HMMusicCell.m in Sources */,
 				7DE609681B120E0200BC355D /* HMAudioTool.m in Sources */,
+				BA79870B2C116598006C5B4A /* UIImageView+XM.m in Sources */,
 				7DE609601B120B2400BC355D /* NSObject+MJMember.m in Sources */,
 				7DE609301B120A9300BC355D /* HMMusicsViewController.m in Sources */,
+				BA28145D2C10152500AEEEAD /* HMWangyiScene.m in Sources */,
 				7DE3EB9E1B1AFC7B00A27644 /* DRNRealTimeBlurView.m in Sources */,
+				BAEC10A72C0DEBA400B803C9 /* HMRequestTool.m in Sources */,
 				7DE3EBA21B1AFCA600A27644 /* HMLrcView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +812,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -781,6 +861,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -792,12 +873,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 34LPAHZG4A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8ACMV7U47L;
 				INFOPLIST_FILE = "音乐播放器/Info.plist";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jinheng.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esigame.music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = music;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -807,12 +894,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 34LPAHZG4A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8ACMV7U47L;
 				INFOPLIST_FILE = "音乐播放器/Info.plist";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jinheng.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esigame.music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = music;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

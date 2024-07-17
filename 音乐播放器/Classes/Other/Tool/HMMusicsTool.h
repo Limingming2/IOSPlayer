@@ -7,22 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HMMusic.h"
 
 @interface HMMusicsTool : NSObject
 // 获取所有音乐
 + (NSArray *)musics;
 
 // 设置当前正在播放的音乐
-+ (void)setPlayingMusic:(HMMusic *)music;
++ (void)setPlayingMusic:(id)music;
 
 // 返回当前正在播放的音乐
-+ (HMMusic *)returnPlayingMusic;
++ (id)returnPlayingMusic;
 
 // 获取下一首
-+ (HMMusic *)nextMusic;
++ (id)nextMusic;
 
 // 获取上一首
-+ (HMMusic *)previouesMusic;
++ (id)previouesMusic;
 
 @end
